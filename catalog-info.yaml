@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: nps-popbo-external-api
-  title: NPS POPBO External API Services
+  title: NPS POPBO External API Service
   description: External API service for NPS POPBO integration with third-party services including Signzy, Protean, PRAN, PAN validation, and CKYC services.
   tags:
     - finance
@@ -10,8 +10,8 @@ metadata:
     - pension
     - external-integration
   links:
-    - url: https://www.qa-mynps.nps-proteantech.in//api-gateway/externalapi
-      title: QA Environment
+    - url: https://www.pilot-mynps.nps-proteantech.in/api-gateway/externalapi
+      title: UAT Environment
       icon: dashboard
 spec:
   type: openapi
@@ -33,8 +33,8 @@ metadata:
     - backend
     - nps
   links:
-    - url: https://www.pilot-mynps.nps-proteantech.in/api-gateway/externalapi
-      title: Pilot Environment
+    - url: https://www.qa-mynps.nps-proteantech.in/api-gateway/externalapi
+      title: Dev Environment
 spec:
   type: service
   lifecycle: production

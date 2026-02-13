@@ -11,11 +11,11 @@
   },
   "servers": [
     {
-      "url": "https://uat-pop2.proteanx.io/api-gateway/externalapi",
+      "url": "https://www.qa-mynps.nps-proteantech.in/api-gateway/externalapi",
       "description": "UAT Server"
     },
     {
-      "url": "https://dev-pop2.proteanx.io/api-gateway/externalapi",
+      "url": "https://www.pilot-mynps.nps-proteantech.in/api-gateway/externalapi",
       "description": "Dev Server"
     }
   ],
@@ -871,7 +871,7 @@
       "get": {
         "tags": ["DigiLocker"],
         "summary": "DigiLocker OAuth Callback (Public)",
-        "description": "Processes the DigiLocker OAuth callback after user authorization. This endpoint is PUBLIC and does not require API key authentication.\n\n**Example curl command:**\n```bash\ncurl --location 'https://uat-pop2.proteanx.io/api-gateway/externalapi/api/v1/digilocker/getDigiKycDetails?code=YOUR_AUTH_CODE&state=YOUR_STATE&docName=Aadhaar%20Card'\n```",
+        "description": "Processes the DigiLocker OAuth callback after user authorization. This endpoint is PUBLIC and does not require API key authentication.\n\n**Example curl command:**\n```bash\ncurl --location 'https://www.qa-mynps.nps-proteantech.in/api-gateway/externalapi/api/v1/digilocker/getDigiKycDetails?code=YOUR_AUTH_CODE&state=YOUR_STATE&docName=Aadhaar%20Card'\n```",
         "security": [],
         "parameters": [
           {
@@ -957,7 +957,7 @@
       "get": {
         "tags": ["DigiLocker"],
         "summary": "Get KYC Data from File",
-        "description": "Downloads and parses KYC XML data from file management service and returns structured JSON response. Can accept either a reference number or file ID.\n\n**Example curl command:**\n```bash\ncurl --location 'https://uat-pop2.proteanx.io/api-gateway/externalapi/api/v1/digilocker/getKycData/cea6236a-4d7a-46e4-80e3-17205e1e6cb1' \\\n--header 'x-api-key: 616a21cf-0a6e-462d-b292-f7a6baa6d9c0'\n```",
+        "description": "Downloads and parses KYC XML data from file management service and returns structured JSON response. Can accept either a reference number or file ID.\n\n**Example curl command:**\n```bash\ncurl --location 'https://www.qa-mynps.nps-proteantech.in/api-gateway/externalapi/api/v1/digilocker/getKycData/cea6236a-4d7a-46e4-80e3-17205e1e6cb1' \\\n--header 'x-api-key: 616a21cf-0a6e-462d-b292-f7a6baa6d9c0'\n```",
         "parameters": [
           {
             "name": "refNumber",
