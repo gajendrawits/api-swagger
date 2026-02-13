@@ -1,0 +1,53 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: nps-popbo-external-api
+  title: NPS POPBO External API Services
+  description: External API service for NPS POPBO integration with third-party services including Signzy, Protean, PRAN, PAN validation, and CKYC services.
+  tags:
+    - finance
+    - nps
+    - pension
+    - external-integration
+  links:
+    - url: https://www.qa-mynps.nps-proteantech.in//api-gateway/externalapi
+      title: QA Environment
+      icon: dashboard
+spec:
+  type: openapi
+  lifecycle: production
+  owner: guests # Change this to your specific Backstage group (e.g., 'infrastructure' or 'nps-team')
+  system: nps-system # Optional: group related components together
+  definition:
+    $text: ./swagger/external.json
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nps-popbo-service
+  title: NPS POPBO Service
+  description: The backend service implementing the External NPS POPBO API.
+  tags:
+    - java
+    - backend
+    - nps
+  links:
+    - url: https://www.pilot-mynps.nps-proteantech.in/api-gateway/externalapi
+      title: Pilot Environment
+spec:
+  type: service
+  lifecycle: production
+  owner: guests # Change this to your specific Backstage group
+  system: nps-system
+  providesApis:
+    - nps-popbo-external-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: nps-system
+  title: NPS Ecosystem
+  description: System wrapper for NPS related services
+spec:
+  owner: guests
